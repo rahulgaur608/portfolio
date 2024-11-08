@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Linkedin, Github, Mail, MapPin, ArrowRight, Sun, Moon, Twitter, Facebook, Instagram, Menu } from 'lucide-react'
+import Image from 'next/image'
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('home')
@@ -101,7 +102,7 @@ export default function Portfolio() {
             <div className="md:w-1/2 mb-8 md:mb-0">
               <h2 className={`text-4xl md:text-5xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>
                 Hi,<br />
-                I'm <span className={isDarkMode ? 'text-red-600' : 'text-blue-600'}>Rahul Gour</span><br />
+                I&apos;m <span className={isDarkMode ? 'text-red-600' : 'text-blue-600'}>Rahul Gour</span><br />
                 AI Engineer & Business Development
               </h2>
               <Button 
@@ -118,9 +119,11 @@ export default function Portfolio() {
             <div className="md:w-1/2 flex justify-center">
               <div className="relative w-64 h-64 overflow-hidden rounded-full shadow-xl transform transition-all duration-300 hover:scale-105 hover:rotate-3 perspective-1000">
                 <div className={`absolute inset-0 ${isDarkMode ? 'bg-gradient-to-br from-red-600 to-red-800' : 'bg-gradient-to-br from-blue-400 to-purple-500'} opacity-75`}></div>
-                <img
+                <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2488-ElMvPSdr51mhEjzxWMd64eeKSWjKdR.jpg"
                   alt="Rahul Gour's portrait"
+                  width={256}
+                  height={256}
                   className="absolute w-auto h-[200%] max-w-none left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2 transform transition-transform duration-300 hover:scale-110"
                 />
               </div>
@@ -129,23 +132,23 @@ export default function Portfolio() {
         )}
 
         {activeSection === 'about' && (
-          <div className={`bg-white p-8 rounded-lg shadow-lg ${isDarkMode ? 'bg-gray-900' : ''}`}>
+          <div className={`bg-white p-8 rounded-lg shadow-lg ${isDarkMode ? 'bg-gray-200' : ''}`}>
             <div className="flex justify-between items-start mb-6">
               <h2 className={`text-6xl font-bold ${isDarkMode ? 'text-red-600' : 'text-gray-500'}`}>01</h2>
               <div className="flex space-x-4">
-                <Twitter className={`w-5 h-5 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`} />
-                <Facebook className={`w-5 h-5 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`} />
-                <Instagram className={`w-5 h-5 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`} />
-                <Menu className={`w-5 h-5 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`} />
+                <Twitter className={`w-5 h-5 ${isDarkMode ? 'text-gray-600' : 'text-gray-600'}`} />
+                <Facebook className={`w-5 h-5 ${isDarkMode ? 'text-gray-600' : 'text-gray-600'}`} />
+                <Instagram className={`w-5 h-5 ${isDarkMode ? 'text-gray-600' : 'text-gray-600'}`} />
+                <Menu className={`w-5 h-5 ${isDarkMode ? 'text-gray-600' : 'text-gray-600'}`} />
               </div>
             </div>
-            <h3 className={`text-4xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>Hello</h3>
-            <p className={`mb-4 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+            <h3 className={`text-4xl font-bold mb-4 ${isDarkMode ? 'text-black' : 'text-gray-800'}`}>Hello</h3>
+            <p className={`mb-4 ${isDarkMode ? 'text-black' : 'text-gray-700'}`}>
               AI Engineer specializing in machine learning, automation, and business growth through data-driven strategies, driving innovation and operational efficiency.
             </p>
-            <h4 className={`text-2xl font-semibold mb-2 ${isDarkMode ? 'text-white' : 'text-gray-800'}`}>Education</h4>
-            <p className={`mb-2 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>Babu Banarsi Das University, Lucknow, India - B.Tech in Artificial Intelligence</p>
-            <p className={isDarkMode ? 'text-gray-300' : 'text-gray-700'}>Specialization in AI-driven solutions, focusing on developing cutting-edge algorithms and applications to solve complex business problems.</p>
+            <h4 className={`text-2xl font-semibold mb-2 ${isDarkMode ? 'text-black' : 'text-gray-800'}`}>Education</h4>
+            <p className={`mb-2 ${isDarkMode ? 'text-black' : 'text-gray-700'}`}>Babu Banarsi Das University, Lucknow, India - B.Tech in Artificial Intelligence</p>
+            <p className={isDarkMode ? 'text-black' : 'text-gray-700'}>Specialization in AI-driven solutions, focusing on developing cutting-edge algorithms and applications to solve complex business problems.</p>
           </div>
         )}
 
