@@ -120,7 +120,7 @@ export default function Portfolio() {
               <div className="relative w-64 h-64 overflow-hidden rounded-full shadow-xl transform transition-all duration-300 hover:scale-105 hover:rotate-3 perspective-1000">
                 <div className={`absolute inset-0 ${isDarkMode ? 'bg-gradient-to-br from-red-600 to-red-800' : 'bg-gradient-to-br from-blue-400 to-purple-500'} opacity-75`}></div>
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_2488-ElMvPSdr51mhEjzxWMd64eeKSWjKdR.jpg"
+                  src="/img/IMG_2488.jpg" // Path relative to the public folder
                   alt="Rahul Gour's portrait"
                   width={256}
                   height={256}
